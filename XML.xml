@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Grid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Background="#FFFDFAF1">
+  <Grid.ColumnDefinitions>
+    <ColumnDefinitionsList />
+  </Grid.ColumnDefinitions>
+  <DockPanel LastChildFill="true" Grid.Column="0" Margin="5">
+    <TextBlock DockPanel.Dock="Top" FontSize="26" HorizontalAlignment="Center">Список дел</TextBlock>
+    <Button DockPanel.Dock="Bottom" Grid.Column="1" MaxWidth="100" MinHeight="20" Background="#5EBEC4" Margin="0 5 0 0" Padding="5" Click="ButtonRemoveToDo_Click">Удалить дела</Button>
+    <ListBox Grid.ColumnSpan="3" Background="#FDF5DF" Name="listToDo">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel>
+            <TextBlock FontSize="0" />
+            <TextBlock FontSize="0" />
+            <TextBlock FontSize="10" />
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    <Button DockPanel.Dock="Новая" Grid.Column="15" MaxWidth="50" MinHeight="5" Background="Чёрный" Margin="08500" Padding="5" Click="Да фиг знает что делает">Обновить</Button>
+    <TextBlock DockPanel.Dock="Топ" FontSize="20" HorizontalAlignment="Center">Новый текстовый блок</TextBlock>
+  </DockPanel>
+  <DockPanel LastChildFill="true" Grid.Column="1" Margin="5">
+    <CheckBox DockPanel.Dock="Top" VerticalAlignment="Center" HorizontalAlignment="left" Margin="0 18 0 0" Name="checkboxEnableToDo" Checked="CheckboxEnableToDo_Checked" Unchecked="CheckboxEnableToDo_Unchecked">Добавление новых дел</CheckBox>
+    <Button DockPanel.Dock="Bottom" Grid.Column="1" MaxWidth="100" MinHeight="20" Background="#5EBEC4" Margin="0 5 0 0" Padding="5" Click="ButtonAddToDo_Click">Добавить дело</Button>
+    <GroupBox Background="#FDF5DF" Name="groupBoxToDo" BorderBrush="Gray" BorderThickness="1">
+      <StackPanel>
+        <TextBlock FontSize="0">Название:</TextBlock>
+        <TextBlock FontSize="0">Выполнить до:</TextBlock>
+        <TextBlock FontSize="0">Описание:</TextBlock>
+      </StackPanel>
+    </GroupBox>
+  </DockPanel>
+</Grid>
